@@ -1,146 +1,241 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* font-family: "Bebas Neue", sans-serif; */
-* {
+/* General: Estilo para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif; /* Fuentes limpias y modernas */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    list-style: none;
+    background-color: #f4f4f4; /* Fondo gris claro */
+    color: #333; /* Texto oscuro para mejor contraste */
 }
 
-body {
-    font-family: "Poppins", serif;
-    text-transform: none;
-}
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 45px 0;
-}
-
-.card {
-    padding: 10px 5px;
-    margin: 0 10px;
-    border-radius: 15px;
-}
-
-.card img {
-    width: 300px;
-    margin-bottom: 15px;
-}
-
-
-.section {
-    margin: 0 auto;
-    display: flex;
-    width: 600px;
-    height: 430px;
-}
-
-section img:hover {
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-
-}
-/* color naranja parte de arriba del encabezado donde esta la marca */
+/* Estilo para el encabezado */
 header {
-    background-color: #eb9329;
-    color: aliceblue;
-    padding: 10px 0;
-    text-align: center;
-} 
- /* distancia en los botones sector inicio,productos,contactos,carrito etc */
-header nav ul {
-    list-style: none;
+    background-color: #2C3E50; /* Fondo oscuro para el header */
+    color: white; /* Texto blanco */
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    text-align: center; /* Centrado del contenido */
+}
+
+/* Estilo para el título principal (h1) */
+h1 {
+    font-size: 3rem; /* Tamaño grande para el título */
+    font-weight: 700; /* Negrita */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin: 0;
+    color: #ecf0f1; /* Color claro para el título */
+}
+
+/* Estilo para el menú de navegación (nav) */
+nav {
+    background-color: #34495E; /* Fondo de navegación */
+    padding: 10px 0; /* Espaciado superior e inferior */
+}
+
+nav ul {
+    list-style-type: none; /* Eliminar los puntos en las listas */
+    margin: 0;
     padding: 0;
-    justify-content: center; 
+    display: flex; /* Establecer los elementos como una fila */
+    justify-content: center; /* Centrado horizontal de los enlaces */
 }
-/* distancia en los botones sector inicio,productos,contactos,carrito etc */
-header nav ul li {
-    display: inline;
-    margin: 0 20px;
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre los elementos de la lista */
 }
-/* da color al sector de inicio,productos,contactos,etc */
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+
+/* Estilo para los enlaces en el menú */
+nav ul li a {
+    text-decoration: none; /* Quitar subrayado */
+    color: #ecf0f1; /* Color de texto blanco claro */
+    font-size: 1.2rem; /* Tamaño de fuente adecuado */
+    font-weight: 500; /* Peso de la fuente medio */
+    display: inline-block; /* Hace que el enlace se comporte como un bloque */
+    padding: 10px 15px; /* Espaciado interno */
 }
-/* cuadrado violeta seccion clientes(card) */
-.grid_container {
-    border: 6px solid rgb(108, 15, 189);
-    width: min(90%,700px);
-    margin: 30px 0;
-    padding: 10px;
+
+/* Efecto hover para los enlaces del menú */
+nav ul li a:hover {
+    background-color: #1abc9c; /* Color de fondo al pasar el ratón */
+    color: white; /* Cambia el color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Suaviza la transición */
+}
+
+/* Estilo para los títulos h3 y h4 */
+h3, h4 {
+    font-size: 1.5rem; /* Tamaño de fuente mediano */
+    color: #2C3E50; /* Color oscuro para los títulos */
+    margin-bottom: 15px; /* Espaciado debajo de los títulos */
+    font-weight: 600; /* Peso de la fuente medio */
+}
+
+/* Estilos adicionales (por ejemplo, para el pie de página, si es necesario) */
+footer {
+    background-color: #2C3E50; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px 0;
     text-align: center;
-    display: grid;
-    grid-template-columns:repeat(auto-fill,minmax(350px, 1fr));
-    grid-auto-rows: minmax(90px,1fr);
-    gap: 10px;
-
-}
-/* estilo al grid de clientes */
-.grid_item{
-    font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-style: italic;
-    background-color: rgb(235, 172, 94);
-    border: 2px solid rgb(34, 18, 18);
-    box-shadow: 0px 15px 20px rgb(36, 30, 20);
-
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-.contactos {
+footer a {
+    color: #ecf0f1; /* Enlaces blancos */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #1abc9c; /* Color de enlace cuando se pasa el ratón */
+}
+
+
+/* Estilo de la sección de productos destacados */
+.container {
+    margin-top: 40px;
+}
+
+.container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .card {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.container .card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón sobre el producto */
+}
+
+/* Estilo de la imagen de los productos */
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+
+/* Estilo de la card-body */
+.card-body {
     padding: 20px;
-    background-color: #f4f4f4;
-}
-
-.contactos form {
+    background-color: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.contactos label {
-    margin: 10px 0 5px;
+.card-body h5 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 20 px;
+    flex-grow: 1;
 }
 
-.contactos input, .contactos textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 100%;
+.card-body p {
+    font-size: 1rem;
+    color: #555;
+} */
+
+/* Estilo para los botones */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-/* 
-Media Query para pantallas grandes
-@media screen and (min-width: 768px) {
-    .contactos {
-        max-width: 700px;
-        margin: 0 auto;
-    }
 
+.btn-primary:hover {
+    background-color: #0056b3;
 }
 
-/* Media Query para pantallas pequeñas */
-/* @media screen and (max-width: 767px) {
-    .contactos {
-        padding: 10px; 
-    } */
+/* Estilo para el pie de la página */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
 
 
+/* Estilo para las tarjetas */
+.card {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20 px;
+    width: 18rem;
+    border-radius: 8px; /* Bordes redondeados */
+    border: none; /* Eliminar borde predeterminado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación de hover */
+}
+
+/* Efecto hover para las tarjetas */
+.card:hover {
+    transform: translateY(-5px); /* Elevar la tarjeta ligeramente */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumentar la sombra en hover */
+}
+
+
+/* Estilo para el cuerpo de la tarjeta */
+.card-body {
+    padding: 15px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Estilo del texto de la tarjeta */
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Estilo del contenedor de las tarjetas */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0px; /* Espacio entre las tarjetas */
+}
+
+/* Estilo de la columna de la tarjeta */
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Espacio inferior */
+}
 /* color naranja de la seccion footer */
 .footer {
     
     background-color: #e17d18;
     padding: 5px;
 }
-/* se separa a lo ancho el sector de "nosotros,ayuda y los datos de telefono,mail etc" */
+/* separa el ancho del sector nosotros,ayuda etc */
 .footer-row {
     display: flex;
     flex-wrap: wrap;

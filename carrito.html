@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Carrito - Tienda Online</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Pronto Volverás</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fa-solid fa-house fa-fw"></i> Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="productos.html" class="nav-link">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="destacados.html" class="nav-link">Destacados</a>
+                </li>
+                <li class="nav-item">
+                    <a href="clientes.html" class="nav-link">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="carrito.html" class="nav-link">
+                        <i class="fa-solid fa-cart-shopping fa-fw"></i> Carrito
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container my-4">
+        <h4>Productos en tu Carrito</h4>
+        
+        <!-- tabla para los productos que estan en el carrito -->
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="carrito">
+                
+            </tbody>
+        </table>
+
+        
+        <div id="total" class="mt-4">
+            <!-- se muestra e total de los productos -->
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="btn btn-success" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

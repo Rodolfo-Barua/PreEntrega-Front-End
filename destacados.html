@@ -4,33 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2d9a107170.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');">
-    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');">
     <link rel="stylesheet" href="https://www.instagram.com/prontovolveras?igsh=NGp6Mjd2ZWNlZzAz">
     <link rel="stylesheet" href="https://formspree.io/f/xldenvrl">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Bienvenidos a nuestro sitio web</title>
 </head>
 <body>
     <header>
-        <h1>Pronto Volveras</h1>
+        <h1 class="text-center">Pronto Volverás</h1>
         <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="destacados.html">Destacados</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="#" class="carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fa-solid fa-house fa-fw"></i> Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="productos.html" class="nav-link">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="destacados.html" class="nav-link">Destacados</a>
+                </li>
+                <li class="nav-item">
+                    <a href="clientes.html" class="nav-link">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="carrito.html" class="nav-link">
+                        <i class="fa-solid fa-cart-shopping fa-fw"></i> Carrito
+                    </a>
+                </li>
             </ul>
-        </nav> 
+        </nav>
     </header>
 
-    <main>
-        <h2>Descubre nuestros nuevos productos</h2>
-        <p>Le pedimos disculpas,por el momento NO CONTAMOS con productos nuevos.</p>
-    </main>
+    
+    <div class="container my-4">
+        <h4>Destacados</h4>
+        <p>Estos son nuestros productos mas vendidos..</p>
+
+        <div id="destacados" class="row">
+            
+            <div class="col-md-4 mb-4"> 
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronRosaviejo.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 1</h5>
+                        <p class="card-text">Poleron Rosa material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronCeleste.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 2</h5>
+                        <p class="card-text">Poleron celeste material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronGrisClaro.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 3</h5>
+                        <p class="card-text">Poleron Gris Claro material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronGrisOscuro.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 4</h5>
+                        <p class="card-text">Poleron Gris Oscuro material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronMostaza.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 5</h5>
+                        <p class="card-text">Poleron Mostaza material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronNaranja.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 6</h5>
+                        <p class="card-text">Poleron Naranja material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronNegro.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 7</h5>
+                        <p class="card-text">Poleron Naranja material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/poleronRojo.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Poleron 8</h5>
+                        <p class="card-text">Poleron Rojo material hilo bremer,excelente calidad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="img/logo.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">P&V</h5>
+                        <p class="card-text">Pronto Volveras.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/script.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+</html>
+
 
 
 

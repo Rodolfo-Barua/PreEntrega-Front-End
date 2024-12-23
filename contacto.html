@@ -1,52 +1,103 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2d9a107170.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');">
-    <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');">
     <link rel="stylesheet" href="https://www.instagram.com/prontovolveras?igsh=NGp6Mjd2ZWNlZzAz">
     <link rel="stylesheet" href="https://formspree.io/f/xldenvrl">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Bienvenidos a nuestro sitio web</title>
 </head>
 <body>
     <header>
-        <h1>Pronto Volveras</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="destacados.html">Destacados</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="#" class="carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav> 
-    </header>
-<h1>Pronto Volveras</h1>
-    <main>
-        <h1>Contáctanos</h1>
-        <p>Si tenes alguna pregunta con respecto al talle,modelo,color o calidad, no dudes en contactarnos a través del siguiente formulario,por correo electrónico por o por whatsaap..</p>
-        <section id="Contacto">
-            <form action="https://formspree.io/f/xldenvrl" method="POST">  
-                <label for="nombre">Nombre:</label>
-                <input type="text" pleaceholder="Escriba su nombre" required
-                maxlength="12" minlength="3"><br>
-                <label for="Telefono">Telefono:</label>
-                <input type="numero" pleaceholder="Escriba su numero" required
-                maxlength="15" minlength="10"><br>
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-                <input type="submit" value="Enviar">
-            </form>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.6457565868554!2d-58.47033090277612!3d-34.55544646897737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb684c479c359%3A0xd46c33cb8d773a96!2s3300%20Cramer%20Av.!5e0!3m2!1ses-419!2sar!4v1729520856252!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
-        </section>
-    </main>
+    <h1 class="text-center">Pronto Volverás</h1>
+    <nav>
 
-</body>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house fa-fw"></i> Inicio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="productos.html" class="nav-link">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a href="destacados.html" class="nav-link">Destacados</a>
+            </li>
+            <li class="nav-item">
+                <a href="clientes.html" class="nav-link">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a href="carrito.html" class="nav-link">
+                    <i class="fa-solid fa-cart-shopping fa-fw"></i> Carrito
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
 
+        <main>
+            <div class="container my-5">
+                <h1 class="text-center">Contáctanos</h1>
+                <p class="text-center">Si tienes alguna pregunta con respecto al talle, modelo, color o calidad, no dudes en contactarnos a través del siguiente formulario, por correo electrónico o por WhatsApp.</p>
+                
+                <section id="Contacto">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form action="https://formspree.io/f/xldenvrl" method="POST">
+                                <div class="form-group"></div>
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" 
+                                    required minlength="3" maxlength="15" pattern="[A-Za-z]+" title="Solo se permiten letras" />
+
+                                <div class="form-group">   
+                                    <label for="Telefono">Teléfono:</label>
+                                    <input type="tel" name="Telefono" id="Telefono" placeholder="Escribe tu número" 
+                                    required maxlength="15" minlength="10" pattern="^[0-9]+$" 
+                                    title="Solo se permiten números" />
+                                
+                                
+
+                                <div class="form-group">
+                                    <label for="email">Correo Electrónico:</label>
+                                    <input type="email" id="email" name="email" required
+                                    placeholder="Escribe tu correo electrónico"
+                                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                    title="Correo electrónico válido (letras, números, puntos, guiones, y @)" />
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="mensaje">Mensaje:</label>
+                                    <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h4 class="text-center">Ubicación</h4>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.6457565868554!2d-58.47033090277612!3d-34.55544646897737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb684c479c359%3A0xd46c33cb8d773a96!2s3300%20Cramer%20Av.!5e0!3m2!1ses-419!2sar!4v1729520856252!5m2!1ses-419!2sar" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <script src="js/script.js"></script> 
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    

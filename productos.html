@@ -5,138 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2d9a107170.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://www.instagram.com/prontovolveras?igsh=NGp6Mjd2ZWNlZzAz">
-    <title>Productos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://formspree.io/f/xldenvrl">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Bienvenidos a nuestro sitio web</title>
 </head>
 <body>
-    <header>
-        <h1>Pronto Volveras</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="destacados.html">Destacados</a></li>
-                <li><a href="clientes.html">Clientes</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="#" class="carrito"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>
-        </nav> 
-    </header>
-    <main>
-        <h1>Productos Disponibles</h1>
-        <p>Explora nuestros productos.</p>
-    <div class="card-container">
-        <div class="card">
-            <img src="img/poleronCeleste.jpg" alt="sweater">
-            <p>Sweater J51 Poleron Celeste</p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
-        </div>
-        <div class="card">
-            <img src="img/poleronGrisClaro.jpg" alt="sweater">
-            <p>Sweater J51 Gris Claro</p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
-        </div>
-        <div class="card">
-            <img src="img/poleronMostaza.jpg" alt="sweater">
-            <p>Sweater J51 Poleron Motaza </p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
-        </div>
-        <div class="card">
-            <img src="img/poleronGrisOscuro.jpg" alt="sweater">
-            <p>Sweater J51 Gris Oscuro</p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
+    <header> 
+    <h1 class="text-center">Pronto Volverás</h1>
+    <nav>
+
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-house fa-fw"></i> Inicio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="productos.html" class="nav-link">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a href="destacados.html" class="nav-link">Destacados</a>
+            </li>
+            <li class="nav-item">
+                <a href="clientes.html" class="nav-link">Clientes</a>
+            </li>
+            <li class="nav-item">
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </li>
+            <li class="nav-item">
+                <a href="carrito.html" class="nav-link">
+                    <i class="fa-solid fa-cart-shopping fa-fw"></i> Carrito
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- para filtrar los productos por categoria -->
+    <div class="container my-4">
+        <h4>Filtrar por Categoría</h4>
+        <select id="filtro-categoria" class="form-control" onchange="filtrarProductos()">
+            <option value="">Seleccionar Categoría</option>
+            <option value="men's clothing">Ropa Masculina</option>
+            <option value="women's clothing">Ropa Femenina</option>
+            <option value="jewelery">Joyería</option>
+            <option value="electronics">Electrónica</option>
+        </select>
+    </div>
+
+    <div id="productos" class="container my-4 productos-page">
+<!-- 
+    <div class="container my-4"> -->
+        <h4>Productos Disponibles</h4>
+        <div id="productos" class="row">
+        
         </div>
     </div>
-    <div class="card-container">
-        <div class="card">
-            <img src="img/poleronNaranja.jpg" alt="sweater">
-            <p>Sweater J51 Poleron Naranja</p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
-        </div>
-        <div class="card">
-            <img src="img/poleronNegro.jpg" alt="sweater">
-            <p>Sweater J51 Gris Negro</p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
-        </div>
-        <div class="card">
-            <img src="img/poleronRojo.jpg" alt="sweater">
-            <p>Sweater J51 Poleron Rojo </p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
-        </div>
-        <div class="card">
-            <img src="img/poleronRosaviejo.jpg" alt="sweater">
-            <p>Sweater J51 Gris Rosa</p>
-            <p>Precio:$25900</p>
-            <a href="#">Agregar al carrito...</a>
-        </div>
-    </div>
-        <!-- <section class="card-container"> 
-            <div class="card">
-                <img src="img/poleronCeleste.jpg" alt="Imagen 1" class="card-image">
-                <div class="card-content">
-                    <h2 class="card-title">Poleron Celeste</h2>
-                    <p class="card-description">Precio:$25900.</p>
-                    <a href="#" class="card-button">Ver más</a>
-                </div>
-                <div class="card">
-                    <img src="img/poleronGrisClaro.jpg" alt="Imagen 2" class="card-image">
-                    <div class="card-content">
-                <h2 class="card-title">Poleron Gris Melange</h2>
-                <p class="card-description">Precio:$25900.</p>
-                <a href="#" class="card-button">Ver más</a>
-                </div>
-                <div class="card">
-                    <img src="img/poleronMostaza.jpg" alt="Imagen 2" class="card-image">
-                    <div class="card-content">
-                <h2 class="card-title">Poleron Mostaza</h2>
-                <p class="card-description">Precio:$25900.</p>
-                <a href="#" class="card-button">Ver más</a>
-                </div>
-                <div class="card">
-                    <img src="img/poleronNegro.jpg" alt="Imagen 2" class="card-image">
-                    <div class="card-content">
-                <h2 class="card-title">Poleron Negro</h2>
-                <p class="card-description">Precio:$25900.</p>
-                <a href="#" class="card-button">Ver más</a>
-                </div>
-                <div class="card">
-                    <img src="img/poleronGrisOscuro.jpg" alt="Imagen 2" class="card-image">
-                    <div class="card-content">
-                <h2 class="card-title">Poleron Gris Oscuro</h2>
-                <p class="card-description">Precio:$25900.</p>
-                <a href="#" class="card-button">Ver más</a>
-                </div>
-                <div class="card">
-                    <img src="img/poleronRojo.jpg" alt="Imagen 2" class="card-image">
-                    <div class="card-content">
-                <h2 class="card-title">Poleron Rojo</h2>
-                <p class="card-description">Precio:$25900.</p>
-                <a href="#" class="card-button">Ver más</a>
-                </div> 
-                <div class="card">
-                    <img src="img/poleronNaranja.jpg" alt="Imagen 2" class="card-image">
-                    <div class="card-content">
-                <h2 class="card-title">Poleron Naranja</h2>
-                <p class="card-description">Precio:$25900.</p>
-                <a href="#" class="card-button">Ver más</a>
-                </div>
-                <div class="card">
-                    <img src="img/poleronRosaviejo.jpg" alt="Imagen 2" class="card-image">
-                    <div class="card-content">
-                <h2 class="card-title">Poleron Rosa Viejo</h2>
-                <p class="card-description">Precio:$25900.</p>
-                <a href="#" class="card-button">Ver más</a>
-                </div>
-            </div>   -->
-    </main>
+
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
